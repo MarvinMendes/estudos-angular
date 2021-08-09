@@ -1,0 +1,18 @@
+<form #alunoForm="ngForm" *ngIf="aluno">
+    <div class="container">
+        <div class="row row-cols-2">
+            <div class="list-group ">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Id: {{ aluno.id }} </li>
+                    <li class="list-group-item">Nome: {{ aluno.name }}</li>
+                    <li class="list-group-item">Idade: {{ aluno.age }}</li>
+                    <li class="list-group-item">CPF: {{ aluno.cpf }}</li>
+                    <li class="list-group-item">E-mail: {{ aluno.email }}</li>
+                    <li class="list-group-item">Telefone: {{ aluno.phone }}</li>
+                  </ul>
+            </div>
+        </div>
+        <button (click)="editarAluno()" type="button" class="btn btn-success">Editar</button>
+
+    </div>
+</form>

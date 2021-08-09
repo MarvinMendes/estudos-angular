@@ -1,0 +1,29 @@
+<div class="container">
+    <form #courseForm="ngForm" *ngIf="course">
+      <div class="mb-3">
+        <h4>Editar</h4>
+        <div id="emailHelp" class="form-text">Aqui você poderá editar os dados dos seus cursos.</div>
+
+      </div>
+        <div class="mb-3">
+            <label class="form-label">Nome</label>
+            <input [(ngModel)]="course.name" class="form-control" name="name" >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Descrição</label>
+            <input [(ngModel)]="course.description" class="form-control" name="description">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Preço</label>
+            <input [(ngModel)]="course.price" class="form-control" name="price"> 
+          </div>
+          <div class="mb-3">
+            <label  class="form-label">Avaliação</label>
+            <input [(ngModel)]="course.rating" class="form-control" name="rating" >
+            <div id="emailHelp" class="form-text">A avaliação vai de 1 até 5 estrelas</div>
+          </div>
+          <button type="submit" class="btn btn-primary me-md-2" (click)="atualizarCurso()">Salvar</button>
+          <button class="btn btn-secondary" routerLink="/cursos" >Voltar</button>
+
+    </form>
+</div>

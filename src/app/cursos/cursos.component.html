@@ -1,0 +1,11 @@
+
+<div class="container" *ngFor="let curso of cursos">
+    <div class="card" style="width:25rem;">
+        <div class="card-body">
+          <h5 class="card-title"> {{ curso.name }} </h5>
+          <p class="card-text"> {{ curso.description }} </p>
+          <ngbd-rating-decimal ></ngbd-rating-decimal>
+          <a [routerLink]="['/cursos', curso.id]" class="btn btn-primary">Editar</a>
+        </div>
+    </div>
+</div>
